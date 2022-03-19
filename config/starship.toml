@@ -1,0 +1,89 @@
+format = """
+[┌── ](bold white)$shlvl$status$username$directory$git_branch$git_status$git_commit$golang$python$deno$cmd_duration$memory_usage$battery$time
+[└─](bold white)$character"""
+
+scan_timeout = 10
+
+[character]
+#success_symbol = "[❯](bold white)[❯](bold blue)[❯](bold cyan) "
+#error_symbol =   "[❯❯❯](bold red) "
+#success_symbol = "[➤ ](bold white) "
+#error_symbol =   "[➤ ](bold red) "
+success_symbol = "[▶ ](bold white) "
+error_symbol =   "[▶ ](bold red) "
+
+[shell]
+disabled = false
+
+[shlvl]
+disabled = false
+format = "[ Lv.$shlvl ](bold black)"
+threshold = 2
+
+[username]
+disabled = true
+show_always = true
+style_user = "bold green"
+style_root = "bold red"
+format = "[ $user]($style) "
+
+[directory]
+style = "bold blue"
+read_only_style = "white"
+fish_style_pwd_dir_length = 3
+format = "[$read_only]($read_only_style)[  ]($style)[$path]($style) "
+truncation_length = 4 
+truncation_symbol = ".../"
+
+[git_status]
+conflicted = " "
+untracked  = "？"
+stashed    = " "
+modified   = " "
+staged     = " "
+renamed    = " "
+deleted    = "✘ "
+style = "bold yellow"
+ahead = "▲ ${count}"
+behind = "▼ ${count}"
+diverged = "▲ ${ahead_count} ▼ ${behind_count}"
+
+[git_branch]
+format = "on [$symbol$branch](bold purple) "
+
+[cmd_duration]
+format = "took [ $duration](bold black)"
+
+[time]
+disabled = true
+format = 'at [ $time](gray) '
+time_format = "%T"
+utc_time_offset = "+9"
+
+[status]
+style = "red"
+symbol = " "
+not_executable_symbol = "🚫"
+not_found_symbol = " "
+sigint_symbol = " "
+signal_symbol = " "
+format = '[\[$symbol $common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = true
+disabled = false
+
+[memory_usage]
+disabled = true
+threshold = -1
+symbol = " "
+style = "bold underline white"
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+[python]
+style = "bold green"
+
+[golang]
+disabled = false
+

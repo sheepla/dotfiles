@@ -1,0 +1,8 @@
+configuration {
+	columns: 2;
+	font: "PlemolJP Medium 12";
+	show-icons: true;
+	kb-mode-next: "Control+o";
+	kb-mode-previous: "Control+i";
+}
+@import "/home/sheepla/.config/rofi/themes/iceberg.rasi"

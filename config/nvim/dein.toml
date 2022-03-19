@@ -1,0 +1,130 @@
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add = '''
+colorscheme iceberg
+'''
+
+[[plugins]]
+repo = 'machakann/vim-sandwich'
+hook_add = '''
+nmap s <Nop>
+tmap s <Nop>
+'''
+
+#[[plugins]]
+#repo = 'rhysd/accelerated-jk'
+#hook_add = '''
+#nmap j <Plug>(accelerated_jk_gj_position)
+#nmap k <Plug>(accelerated_jk_gk_position)
+#'''
+
+[[plugins]]
+repo = 'haya14busa/dein-command.vim'
+
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo = '4513ECHO/vim-readme-viewer'
+hook_add = '''
+let g:readme_viewer#plugin_manager = 'dein.vim' 
+'''
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+depends = ['vim-skk/skkeleton']
+hook_add = '''
+source $HOME/.config/nvim/lightlinerc.vim
+'''
+
+[[plugins]]
+repo = 'gkeep/iceberg-dark'
+depends = ['itchyny/lightline.vim']
+hook_add = '''
+let g:lightline.colorscheme = 'icebergDark'
+'''
+
+[[plugins]]
+repo = 'lambdalisue/suda.vim'
+
+[[plugins]]
+repo = 'lambdalisue/gina.vim'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+
+[[plugins]]
+repo = 'mattn/ctrlp-ghq'
+
+[[plugins]]
+repo = 'mattn/vim-makedir-for'
+
+[[plugins]]
+repo = 'mattn/vim-maketable'
+
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
+depends = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'nanotee/zoxide.vim'
+
+[[plugins]]
+repo = 'iberianpig/tig-explorer.vim'
+depends = ['rbgrouleff/bclose.vim']
+
+#[[plugins]]
+#repo = 'iberianpig/ranger-explorer.vim'
+#depends = ['rbgrouleff/bclose.vim']
+
+[[plugins]]
+repo = 'voldikss/vim-floaterm'
+
+[[plugins]]
+repo = 'ptzz/lf.vim'
+depends = ['voldikss/vim-floaterm']
+hook_add = '''
+let g:lf_replace_netrw = 1
+'''
+
+[[plugins]]
+repo = 'mattn/vim-goimports'
+hook_add = '''
+let g:goimports = 1
+let g:goimports_simplify = 1
+let g:goimports_simplify_cmd = 'gofumpt'
+'''
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'syusui-s/scrapbox-vim'
+
+[[plugins]]
+repo = 'alker0/chezmoi.vim'
+
+[[plugins]]
+repo = 'rakr/vim-togglebg'
+
+[[plugins]]
+repo = 'mattn/vim-findroot'
+

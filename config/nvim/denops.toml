@@ -1,0 +1,27 @@
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'lambdalisue/guise.vim'
+depends = ['vim-denops/denops.vim']
+
+[[plugins]]
+repo = 'vim-denops/denops-helloworld.vim'
+depends = ['vim-denops/denops.vim']
+
+[[plugins]]
+repo = 'vim-skk/skkeleton'
+depends = ['vim-denops/denops.vim']
+hook_add = '''
+source $HOME/.config/nvim/skkeletonrc.vim
+'''
+
+[[plugins]]
+repo = 'kat0h/bufpreview.vim'
+depends = ['vim-denops/denops.vim']
+
+# [[plugins]]
+# repo = 'skanehira/denops-gh.vim'
+
+[[plugins]]
+repo = 'skanehira/denops-germanium.vim'

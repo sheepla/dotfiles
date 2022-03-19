@@ -1,0 +1,47 @@
+[[plugins]]
+repo = 'arcticicestudio/nord-vim'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'fcpg/vim-orbital'
+
+#[[plugins]]
+#repo = 'morhetz/gruvbox'
+
+[[plugins]]
+repo = 'sainnhe/edge'
+
+[[plugins]]
+repo = 'elianiva/icy.nvim'
+
+[[plugins]]
+repo = 'tyrannicaltoucan/vim-deep-space'
+
+[[plugins]]
+repo = 'arzg/vim-substrata'
+
+#[[plugins]]
+#repo = 'ulwlu/abyss.vim'
+
+[[plugins]]
+repo = 'eskilop/NorthernLights.vim'
+
+[[plugins]]
+repo = 'pgdouyon/vim-alayas'
+
+[[plugins]]
+repo = 'cocopon/pgmnt.vim'
+
+[[plugins]]
+repo = 'kjssad/quantum.vim'
+
+[[plugins]]
+repo = 'github.com/projekt0n/github-nvim-theme'
+
+[[plugins]]
+repo = 'folke/tokyonight.nvim'
+
+[[plugin]]
+repo = 'hachy/eva01.vim'

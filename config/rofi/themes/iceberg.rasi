@@ -1,0 +1,207 @@
+/*******************************************************************************
+ * ROFI Color Theme
+ * User: Sheepla
+ * Copyleft: Sheepla
+ *******************************************************************************/
+
+* {
+    highlight: bold italic;
+    scrollbar: true;
+
+    /* Color palette from iceberg.vim and iceberg-dark
+     *    https://github.com/cocopon/iceberg.vim
+     *    https://github.com/gkeep/iceberg-dark
+     */
+    palette-bg0:     #161821;
+    palette-bg1:     #1e2132;
+    palette-bg2:     #444b71;
+    palette-fg0:     #c6c8d1;
+    palette-fg1:     #aeb4cc;
+    palette-red:     #e27878;
+    palette-green:   #b4be82;
+    palette-yellow:  #e2a478;
+    palette-blue:    #84a0c6;
+    palette-purple:  #a093c7;
+    palette-cyan:    #89b8c2;
+    palette-grey:    #c0bfc9;
+
+    /* Base colors */
+    background:                  @palette-bg0;
+    background-color:            @background;
+    foreground:                  @palette-fg1;
+
+    /* Normal colors */
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @palette-bg1;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @palette-bg2;
+    selected-normal-foreground:  @palette-fg0;
+
+    /* Active window colors */
+    active-background:           @normal-background;
+    active-foreground:           @palette-blue;
+    alternate-active-background: @alternate-normal-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @palette-blue;
+    selected-active-foreground:  @normal-background;
+
+    /* Urgent colors */
+    urgent-background:           @background;
+    urgent-foreground:           @palette-yellow;
+    alternate-urgent-background: @alternate-normal-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @urgent-foreground;
+    selected-urgent-foreground:  @normal-background;
+
+    /* Other colors */
+    border-color:                @palette-bg2;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @palette-bg2;
+}
+
+#window {
+    background-color:             @background-color;
+    children:                     [mainbox];
+}
+
+#mainbox {
+    border:      0;
+    orientation: vertical;
+    children:    [ entry, message, listview, mode-switcher ];
+}
+
+#entry {
+    expand:     false;
+    text-color: @normal-foreground;
+    /* Padding between 2 lines */
+    padding:      10px 0px 10px 10px;
+    border:       0 0 2px;
+    border-color: @palette-bg2;
+    margin:       10px;
+}
+
+#sidebar {
+    expand: false;
+}
+
+/* Message box */
+#textbox {
+    horizontal-align:  0;
+    background-color:  @palette-bg2;
+    padding:           10px 20px 10px 20px ;                 
+    text-color:        @palette-fg0;
+}
+
+#listview {
+    border:        0px 0px 0px ;
+    border-color:  @palette-bg2;
+    padding:       0px 0px 5px 0px;
+    columns:       2;
+    scrollbar:     @scrollbar;
+}
+
+scrollbar {
+   handle-color: @palette-bg2;
+   border-color: @palette-bg1;
+   border-width: 3px;
+}
+
+#mode-switcher {
+    border:       3px 0px 0px 0px;
+    border-color: @palette-bg2;
+}
+
+button { 
+    padding: 5px; 
+}
+
+#button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+#element {
+    border:  0;
+    padding: 3px 10px 3px 10px ;                 
+}
+
+#element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+
+#element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+
+#element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+#element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+#element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+
+#element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+
+#element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+
+#element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+
+#element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding:    2px;
+    children:   [ textbox-prompt-sep, entry, case-indicator ];
+}
+
+case-indicator,
+entry,
+button {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @normal-foreground;
+    margin:     0 0.3em 0 0;
+}
+
+prompt {
+   padding:6px 9px;
+   background-color: @palette-bg2;
+}
+
+#element-icon {
+    size: 18;
+}

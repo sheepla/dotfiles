@@ -1,0 +1,97 @@
+# Basic commands
+alias c='clear'
+alias cls='clear'
+alias mkd='mkdir -pv'
+alias cdtemp='cd "$(mktemp -d)"'
+alias etemp='${EDITOR} '
+mkcd() { mkdir -p "$1" && cd "$1"; }
+newfile() { mkdir -p "$(dirname "${1}")" && touch "${1}"; }
+has() { command -v "${1}" &>/dev/null; }
+
+# Python
+alias py3='python3'
+alias ipy='ipython'
+alias ptpy='ptpython'
+alias grep='grep --color=auto'
+
+alias v="$EDITOR"
+
+# Vim as filter command
+# http://auewe.hatenablog.com/entry/2016/12/03/001000
+vipe () {
+  COMMAND=$(echo "$*")
+  # コロン':'でESC入力を代替する場合はコメントを外す。^[はCtrl+vしてESC押して入力
+  # COMMAND=$(echo "$*" |sed -e 's/:/^[/g')
+  vi - -es +":norm gg" +":norm $COMMAND" +:%p +:q! | sed '2d'
+}
+
+# manpager wrapper with color
+man() {
+    LESS_TERMCAP_md=$'\e[01;34m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;30m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;35m' \
+    command man "$@"
+}
+
+# Git
+alias g='git'
+alias cdg='cd "$(git rev-parse --show-toplevel)"' # cd to git root directory
+
+
+# Ranger (TUI file manager)
+if has ranger
+then
+    alias r='ranger'
+fi
+
+# translate-shell (trans)
+if has trans
+then
+    alias en2ja='trans en:ja -brief -shell -e google 2>/dev/null'
+    alias ja2en='trans ja:en -brief -shell -e google 2>/dev/null'
+    alias eiwa='trans en:ja -dictionary -e google' alias waei='trans ja:en -dictionary -e google 2>/dev/null'
+fi
+
+# bat - cat with syntax highlight
+if has bat
+then
+    alias rebat='bat cache --build'
+    alias cat='bat --wrap auto'
+fi
+
+whichbat() {
+    bat "$(which "${1}")"
+}
+
+# exa - ls alternative
+if has exa
+then
+    alias l='exa --all --icons --classify'
+    alias la='exa --all --icons --classify'
+    alias ls='exa --icons'
+    alias ll='exa --long --all --git --icons'
+    alias lt='exa --long --all --git --icons --tree'
+else
+    alias l='ls -hF --color=auto'
+    alias ls='ls -hF --color=auto'
+    alias la='ls -ahF --color=auto'
+    alias ll='ls -alhF --color=auto'
+fi
+#alias l='exa --classify'
+#alias la='exa --all --classify'
+#alias ll='exa --long --all --git --classify'
+#alias lt='exa --long --all --git --tree --classify'
+
+# gomi - cli trash
+#command -v gomi &>/dev/null && alias rm='gomi'
+has rip && alias rm=rip
+
+alias open='xdg-open'
+alias :q=exit
+alias :e="${EDITOR}"
+alias :w='echo ここVimじゃないよ'
+
+alias htmldump='w3m -dump -T text/html'

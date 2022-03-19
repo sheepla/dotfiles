@@ -1,0 +1,11 @@
+memodir = "${HOME}/doc/"
+editor = "nvim"
+column = 20
+width = 0
+selectcmd = "fzf"
+grepcmd = "grep -nH ${PATTERN} ${FILES}"
+memotemplate = ""
+assetsdir = "."
+pluginsdir = "/home/sheepla/.config/memo/plugins"
+templatedirfile = ""
+templatebodyfile = ""

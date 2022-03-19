@@ -1,0 +1,46 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export BROWSER:firefox
+SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25\x20\x2d\x2dcolor\x3dbg\x2b\x3a\x23404040\x2cbg\x3a\x23383838\x2cspinner\x3a\x2393e0e3\x2chl\x3a\x237cb8bb\x20\x2d\x2dcolor\x3dfg\x3a\x23808080\x2cheader\x3a\x237cb8bb\x2cinfo\x3a\x23e0cf9f\x2cpointer\x3a\x2393e0e3\x20\x2d\x2dcolor\x3dmarker\x3a\x2393e0e3\x2cfg\x2b\x3a\x23c0c0c0\x2cprompt\x3a\x23e0cf9f\x2chl\x2b\x3a\x237cb8bb
+SETUVAR FZF_DISABLE_KEYBINDINGS:0
+SETUVAR FZF_LEGACY_KEYBINDINGS:0
+SETUVAR FZF_PREVIEW_DIR_CMD:ls
+SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
+SETUVAR FZF_REVERSE_ISEARCH_OPTS:\x2d\x2dreverse\x20\x2d\x2dheight\x3d50\x25
+SETUVAR FZF_TMUX_HEIGHT:40\x25
+SETUVAR --path PATH:/usr/local/bin\x1e/usr/bin\x1e/bin\x1e/usr/local/sbin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/sheepla/bin\x1e/home/sheepla/\x2elocal/bin/\x1e/home/sheepla/go\x1e\x7e/go/bin/
+SETUVAR Z_DATA_DIR:/home/sheepla/\x2elocal/share/z
+SETUVAR __fish_initialized:3100
+SETUVAR _fisher_0rax_2F_fish_2D_bd_files:/home/sheepla/\x2econfig/fish/functions/bd\x2efish\x1e/home/sheepla/\x2econfig/fish/functions/uninstall\x2efish\x1e/home/sheepla/\x2econfig/fish/completions/bd\x2efish
+SETUVAR _fisher_decors_2F_fish_2D_ghq_files:/home/sheepla/\x2econfig/fish/functions/__ghq_repository_search\x2efish\x1e/home/sheepla/\x2econfig/fish/conf\x2ed/ghq_key_bindings\x2efish\x1e/home/sheepla/\x2econfig/fish/completions/ghq\x2efish
+SETUVAR _fisher_jethrokuan_2F_fzf_files:/home/sheepla/\x2econfig/fish/functions/__fzf_cd\x2efish\x1e/home/sheepla/\x2econfig/fish/functions/__fzf_complete\x2efish\x1e/home/sheepla/\x2econfig/fish/functions/__fzf_complete_preview\x2efish\x1e/home/sheepla/\x2econfig/fish/functions/__fzf_find_file\x2efish\x1e/home/sheepla/\x2econfig/fish/functions/__fzf_get_dir\x2efish\x1e/home/sheepla/\x2econfig/fish/functions/__fzf_open\x2efish\x1e/home/sheepla/\x2econfig/fish/functions/__fzf_parse_commandline\x2efish\x1e/home/sheepla/\x2econfig/fish/functions/__fzf_reverse_isearch\x2efish\x1e/home/sheepla/\x2econfig/fish/functions/__fzfcmd\x2efish\x1e/home/sheepla/\x2econfig/fish/conf\x2ed/fzf\x2efish
+SETUVAR _fisher_plugins:0rax/fish\x2dbd\x1ejethrokuan/fzf\x1edecors/fish\x2dghq\x1ebigH/git\x2dfuzzy
+SETUVAR fish_color_autosuggestion:4c566a
+SETUVAR fish_color_cancel:normal
+SETUVAR fish_color_command:ffffff
+SETUVAR fish_color_comment:434c5e
+SETUVAR fish_color_cwd:000080
+SETUVAR fish_color_cwd_root:800000
+SETUVAR fish_color_end:88c0d0
+SETUVAR fish_color_error:ebcb8b
+SETUVAR fish_color_escape:00a6b2
+SETUVAR fish_color_history_current:normal
+SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:yellow
+SETUVAR fish_color_match:normal
+SETUVAR fish_color_normal:normal
+SETUVAR fish_color_operator:00a6b2
+SETUVAR fish_color_param:eceff4
+SETUVAR fish_color_quote:a3be8c
+SETUVAR fish_color_redirection:b48ead
+SETUVAR fish_color_search_match:ffff00
+SETUVAR fish_color_selection:c0c0c0
+SETUVAR fish_color_status:red
+SETUVAR fish_color_user:00ff00
+SETUVAR fish_color_valid_path:normal
+SETUVAR fish_greeting:\x1d
+SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_pager_color_completion:normal
+SETUVAR fish_pager_color_description:B3A06D\x1eyellow
+SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
+SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
