@@ -3,7 +3,6 @@ return {
   -- font
   font = wezterm.font_with_fallback({
     {family="PlemolJP Console NF", weight="Medium"},
-    {family="JetBrains Mono", weight="Medium"},
   }),
   font_size = 11.0,
   color_scheme = "iceberg-dark",
