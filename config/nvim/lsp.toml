@@ -1,12 +1,17 @@
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
+on_func = 'lsp#enable'
 
 [[plugins]]
-repo = 'mattn/vim-lsp-settings'
 hook_add = '''
 let g:markdown_fenced_languages = ['ts=typescript']
 let g:lsp_settings_filetype_typescript = ['typescript-language-server', 'eslint-language-server', 'deno']
+augroup vimrc
+    au!
+    autocmd BufWritePre *.ts,*.tsx LspDocumentFormatSync
+augroup END
 '''
+repo = 'mattn/vim-lsp-settings'
 
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip'

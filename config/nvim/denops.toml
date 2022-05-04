@@ -1,5 +1,7 @@
 [[plugins]]
 repo = 'vim-denops/denops.vim'
+on_func = 'denops#server#start'
+hook_source = 'call denops#server#start()'
 
 [[plugins]]
 repo = 'lambdalisue/guise.vim'
@@ -25,3 +27,25 @@ depends = ['vim-denops/denops.vim']
 
 [[plugins]]
 repo = 'skanehira/denops-germanium.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc.vim'
+depends = 'vim-denops/denops.vim'
+on_event = 'InsertEnter'
+hook_source = '''
+execute 'source' fnamemodify($MYVIMRC, ':h'). '/ddcrc.vim'
+'''
+[[plugins]]
+repo = 'shun/ddc-vim-lsp'
+on_source = 'ddc.vim'
+depends = 'vim-lsp'
+
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-around'
+on_source = 'ddc.vim'
+
+

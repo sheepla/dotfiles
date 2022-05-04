@@ -6,10 +6,6 @@ colorscheme iceberg
 
 [[plugins]]
 repo = 'machakann/vim-sandwich'
-hook_add = '''
-nmap s <Nop>
-tmap s <Nop>
-'''
 
 #[[plugins]]
 #repo = 'rhysd/accelerated-jk'
@@ -54,7 +50,7 @@ let g:lightline.colorscheme = 'icebergDark'
 repo = 'lambdalisue/suda.vim'
 
 [[plugins]]
-repo = 'lambdalisue/gina.vim'
+repo = 'lambdalisue/gin.vim'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
@@ -118,9 +114,6 @@ repo = 'tyru/open-browser.vim'
 
 [[plugins]]
 repo = 'syusui-s/scrapbox-vim'
-
-[[plugins]]
-repo = 'alker0/chezmoi.vim'
 
 [[plugins]]
 repo = 'rakr/vim-togglebg'
