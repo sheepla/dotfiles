@@ -71,3 +71,4 @@ _set_prompt
 _set_gh_completion
 #_set_fzf_tab_completion
 _set_fzf_completion
+complete -C /home/sheepla/go/bin/gocomplete go
