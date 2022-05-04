@@ -324,3 +324,5 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
 #        break
 #    fi
 #done
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /home/sheepla/go/bin/gocomplete go
