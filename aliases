@@ -94,4 +94,9 @@ alias :q=exit
 alias :e="${EDITOR}"
 alias :w='echo ここVimじゃないよ'
 
-alias htmldump='w3m -dump -T text/html'
+# alias htmldump='w3m -dump -T text/html'
+htmlview() {
+    if has curl && has godown && has glow; then
+       glow -p <(curl -sL "${1}" | godown) 
+    fi
+}
