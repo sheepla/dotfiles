@@ -16,53 +16,48 @@ let g:lightline = {}
 "  \ue0bd
 "  \ue0be 
 "  \ue0bf
-let g:lightline.separator = { 'left': "\ue0b0", 'right': "\ue0b2" }
-let g:lightline.subseparator = { 'left': "\ue0b1", 'right': "\ue0b3" }
+let g:lightline.separator = { 'left': "\ue0b8", 'right': "\ue0ba" }
+let g:lightline.subseparator = { 'left': "\ue0b9", 'right': "\ue0bb" }
 
 let g:lightline.active = {}
+
 let g:lightline.active.left = [
     \ ['mode', 'paste'], 
     \ ['skkeleton', 'modified'],
-    \ ['filename'],
+    \ ['readoly', 'filename'],
     \ ]
+
 let g:lightline.active.right = [
-    \ ['gitbranch'],
+    \ ['lsp_errors', 'lsp_warnings'],
     \ ['percent'],
+    \ ['git_status'],
     \ ['fileformat', 'fileencoding', 'filetype'],
     \ ]
 
-let g:lightline.component = {}
+let g:lightline.component_expand = {
+    \ 'lsp_warnings': 'lightline_lsp#warnings',
+    \ 'lsp_errors':   'lightline_lsp#errors',
+    \ }
+
+let g:lightline.component_type =  {
+    \ 'lsp_warnings': 'warning',
+    \ 'lsp_errors':   'error',
+    \ 'lsp_ok':       'middle',
+    \ }
+
 let g:lightline.component_function = {}
-let g:lightline.component_function.skkeleton = 'g:LightlineSkkeleton'
-let g:lightline.component_function.gitbranch = 'g:GitCurrentBranch'
+let g:lightline.component_function.skkeleton = 'g:lightline_skk#mode'
+let g:lightline.component_function.git_status = 'g:lightline#hunks#composer'
 
 command! -bar LightlineUpdate
     \ call lightline#init()|
     \ call lightline#colorscheme()|
     \ call lightline#update()
 
-function! g:LightlineSkkeleton() abort
-    if get(g:, 'loaded_skkeleton') == 0
-        return ''
-    endif
-
-    if lightline#mode() == 'INSERT' || lightline#mode() == 'COMMAND'
-        if skkeleton#mode() == 'hira'
-            return 'あ'
-        elseif skkeleton#mode() == 'kata'
-            return 'ア'
-        else
-            return 'Aa'
-        endif
-    else
-        return ''
-    endif
-endfunction
-
-function! g:GitCurrentBranch()
-    if exists(':Gina') == 2
-        return gina#component#repo#branch()
-    else
-        return ''
-    endif
-endfunction
+call lightline_skk#option('display', {
+    \ 'hiragana': 'あ',
+    \ 'katakana': 'ア',
+    \ 'hankaku-katakana': 'ｱｧ',
+    \ 'zenkaku-alphabet': 'Ａ',
+    \ 'alphabet': 'Aa',
+    \ })

@@ -48,4 +48,6 @@ on_source = 'ddc.vim'
 repo = 'Shougo/ddc-around'
 on_source = 'ddc.vim'
 
+[[plugins]]
+repo = 'Omochice/dps-paiza-io-vim'
 

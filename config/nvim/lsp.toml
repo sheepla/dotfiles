@@ -1,17 +1,29 @@
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 on_func = 'lsp#enable'
-
-[[plugins]]
 hook_add = '''
-let g:markdown_fenced_languages = ['ts=typescript']
-let g:lsp_settings_filetype_typescript = ['typescript-language-server', 'eslint-language-server', 'deno']
 augroup vimrc
     au!
     autocmd BufWritePre *.ts,*.tsx LspDocumentFormatSync
+    autocmd BufWritePre *.js,*.jsx LspDocumentFormatSync
+    autocmd BufWritePre *.json LspDocumentFormatSync
+    autocmd BufWritePre *.cs LspDocumentFormatSync
+    autocmd BufWritePre *.ps1 LspDocumentFormatSync
 augroup END
+
+highlight link LspErrorHighlight ALEErrorSign
+highlight link LspWarningHighlight ALEWarningSign
+highlight link LspErrorVirtualText Comment
+highlight link LspWarningVirtualText Comment
 '''
+
+[[plugins]]
 repo = 'mattn/vim-lsp-settings'
+hook_add = '''
+let g:markdown_fenced_languages = ['ts=typescript']
+let g:lsp_settings_filetype_typescript = ['typescript-language-server', 'eslint-language-server', 'deno']
+let g:lsp_settings_filetype_go = ['gopls', 'golangci-lint-langserver']
+'''
 
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip'
@@ -28,3 +40,5 @@ repo = 'prabirshrestha/asyncomplete-lsp.vim'
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
 
+[[plugins]]
+repo = 'halkn/lightline-lsp'

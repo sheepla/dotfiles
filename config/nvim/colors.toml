@@ -14,6 +14,12 @@ repo = 'fcpg/vim-orbital'
 repo = 'sainnhe/edge'
 
 [[plugins]]
+repo = 'sainnhe/sonokai'
+
+[[plugins]]
+repo = 'sainnhe/everforest'
+
+[[plugins]]
 repo = 'elianiva/icy.nvim'
 
 [[plugins]]
@@ -38,10 +44,14 @@ repo = 'cocopon/pgmnt.vim'
 repo = 'kjssad/quantum.vim'
 
 [[plugins]]
-repo = 'github.com/projekt0n/github-nvim-theme'
+repo = 'projekt0n/github-nvim-theme'
 
 [[plugins]]
 repo = 'folke/tokyonight.nvim'
+hook_add = '''
+let g:tokyonight_style = 'night'
+let g:tokyonight_enable_italic = 1
+'''
 
 [[plugin]]
 repo = 'hachy/eva01.vim'

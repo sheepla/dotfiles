@@ -34,10 +34,18 @@ repo = 'cohama/lexima.vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-depends = ['vim-skk/skkeleton']
+depends = ['vim-skk/skkeleton',]
 hook_add = '''
 source $HOME/.config/nvim/lightlinerc.vim
 '''
+
+[[plugins]]
+repo = 'yasunori-kirin0418/lightline_skk.vim'
+depends = ['itchyny/lightline.vim', 'vim-skk/skkeleton']
+
+[[plugins]]
+repo = 'sineto/lightline-hunks'
+depends = ['airblade/vim-gitgutter', 'sinetoami/lightline-hunks']
 
 [[plugins]]
 repo = 'gkeep/iceberg-dark'
@@ -60,9 +68,32 @@ repo = 'lambdalisue/fern.vim'
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
+hook_add = '''
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ }
+nnoremap <Leader>pb :<C-u>CtrlPBuffer<CR>
+nnoremap <Leader>pf :<C-u>CtrlPBuffer<CR>
+nnoremap <Leader>pm :<C-u>CtrlPMRU<CR>
+'''
 
 [[plugins]]
 repo = 'mattn/ctrlp-ghq'
+hook_add = '''
+let g:ctrlp_ghq_actions = [
+\ {"label": "Open", "action": "e", "path": 1},
+\ {"label": "Look", "action": "!ghq look", "path": 0},
+\]
+nnoremap <Leader>pg :<C-u>CtrlPGhq<CR>
+'''
+
+[[plugins]]
+repo = 'mattn/ctrlp-lsp'
+hook_add = '''
+nnoremap <Leader>ps :<C-u>CtrlPLspDocumentSymbol<CR>
+'''
 
 [[plugins]]
 repo = 'mattn/vim-makedir-for'
@@ -83,6 +114,14 @@ repo = 'nanotee/zoxide.vim'
 [[plugins]]
 repo = 'iberianpig/tig-explorer.vim'
 depends = ['rbgrouleff/bclose.vim']
+hook_add = '''
+nnoremap <Leader>tg :<C-u>TigGrep<CR>
+nnoremap <Leader>tb :<C-u>TigBlame<CR>
+nnoremap <Leader>ts :<C-u>TigStatus<CR>
+nnoremap <Leader>tr :<C-u>TigOpenProjectRootDir<CR>
+nnoremap <Leader>tf :<C-u>TigOpenCurrentFile<CR>
+nnoremap <Leader>tc :<C-u>TigOpenFileWithCommit<CR>
+'''
 
 #[[plugins]]
 #repo = 'iberianpig/ranger-explorer.vim'
@@ -96,6 +135,8 @@ repo = 'ptzz/lf.vim'
 depends = ['voldikss/vim-floaterm']
 hook_add = '''
 let g:lf_replace_netrw = 1
+let g:lf_command_override = 'lf -command "set hidden"'
+nnoremap <Leader>lc :Lflcd<CR>
 '''
 
 [[plugins]]
@@ -108,12 +149,12 @@ let g:goimports_simplify_cmd = 'gofumpt'
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
+hook_add = '''
+let g:user_emmet_leader_key = '<C-y>'
+'''
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'
-
-[[plugins]]
-repo = 'syusui-s/scrapbox-vim'
 
 [[plugins]]
 repo = 'rakr/vim-togglebg'

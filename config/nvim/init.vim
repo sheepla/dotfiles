@@ -21,7 +21,7 @@ set hidden
 set belloff=all
 
 " indent
-"set autoindent
+set autoindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -58,6 +58,12 @@ set backspace=indent,eol,start
 " line number
 set number
 "set relativenumber
+
+" indent
+augroup vimrc
+  autocmd BufEnter *.ts,*.js,*.tsx,*jsx set expandtab | set shiftwidth=2
+  autocmd BufEnter *.json set expandtab | set shiftwidth=2
+augroup END
 
 " terminal
 augroup vimrc
@@ -113,11 +119,19 @@ if !has('nvim')
     tnoremap <C-W>z       <cmd>pclose<cr>
     tnoremap <C-W><C-Z>   <cmd>pclose<cr>
 endif
+
 " help doc
 set helplang=ja,en
 
 " key bindings---------------------------------------------------------------{{{
-"
+
+" https://zenn.dev/mattn/articles/83c2d4c7645faa
+nmap gj gj<SID>g
+nmap gk gk<SID>g
+nnoremap <script> <SID>gj gj<SID>g
+nnoremap <script> <SID>gk gk<SID>g
+nmap <SID>g <Nop>
+
 " leader key
 map <Space> <Leader>
 
@@ -236,6 +250,15 @@ nnoremap <silent> <Esc><Esc> :<C-u>set nohlsearch!<CR>
 nnoremap <silent> sT :<C-u>terminal<CR>
 " }}}
 
+" GUI
+set guifont=PlemolJP\ Console\ NF:h11
+if exists('g:nvui')
+  " Configure nvui
+  NvuiCmdFontFamily! PlemolJP\ Console\ NF:h11
+  NvuiCmdFontSize 25.0
+  NvuiScrollAnimationDuration 0.2
+endif
+
 if &compatible
   set nocompatible " Be iMproved
 endif
@@ -274,7 +297,7 @@ filetype plugin indent on
 syntax enable
 
 " If you want to install not installed plugins on startup.
-"if dein#check_install()
-" call dein#install()
-"endif
+if dein#check_install()
+ call dein#install()
+endif
 
