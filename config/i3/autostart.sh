@@ -46,3 +46,6 @@ _has nm-applet &>/dev/null && pgrep nm-applet || nm-applet &
 # Launch input method
 _has fcitx5 &>/dev/null && pgrep fcitx5 || fcitx5 &
 
+# Power event alerting daemon
+_has poweralertd && pgrep poweralertd || poweralertd &
+

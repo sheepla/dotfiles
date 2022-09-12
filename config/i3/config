@@ -6,7 +6,7 @@
 #                                                     /____/   
 
 # Run auto start script
-exec_always --no-startup-id "$HOME/.config/i3/autostart.sh"
+exec_always --no-startup-id "sh $HOME/.config/i3/autostart.sh"
 # }}}
 
 # colorscheme 
@@ -56,7 +56,8 @@ bindsym $mod+Tab   exec --no-startup-id "LANG=en_US.UTF8 rofi -combi drun,run -m
 bindsym $mod+space exec --no-startup-id "LANG=en_US.UTF8 rofi -combi drun,run -modi drun,run -show drun"
 
 # Rofi Emoji
-bindsym $mod+m exec --no-startup-id "rofi -show emoji -modi emoji"
+#bindsym $mod+m exec --no-startup-id "rofi -show emoji -modi emoji"
+bindsym $mod+m exec --no-startup-id "rofi -modi emoji -show emoji -emoji-format '{emoji} <span weight="bold">{name}</span>[ <span size=small>({keywords})</span>]'"
 
 # ArandR
 bindsym $mod+Ctrl+p exec --no-startup-id "$HOME/bin/arandrmenu &"
