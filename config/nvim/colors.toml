@@ -55,3 +55,22 @@ let g:tokyonight_enable_italic = 1
 
 [[plugin]]
 repo = 'hachy/eva01.vim'
+
+[[plugin]]
+repo = 'vim-scripts/reloaded.vim'
+
+[[plugin]]
+repo = 'vim-colors-tone'
+
+[[plugin]]
+repo = 'yasukotelin/shirotelin'
+
+[[plugin]]
+repo = 'rebelot/kanagawa.nvim'
+
+[[plugin]]
+repo = 'tiagovla/tokyodark.nvim'
+
+[[plugin]]
+repo = 'Badacadabra/vim-archery'
+

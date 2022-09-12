@@ -15,6 +15,20 @@ highlight link LspErrorHighlight ALEErrorSign
 highlight link LspWarningHighlight ALEWarningSign
 highlight link LspErrorVirtualText Comment
 highlight link LspWarningVirtualText Comment
+
+let g:lsp_diagnostics_virtual_text_prefix = "▶ "
+let g:lsp_diagnostics_signs_error = {'text': ''}
+let g:lsp_diagnostics_signs_warning = {'text': ''}
+let g:lsp_diagnostics_signs_hint = {'text': ''}
+
+command! LspEnable call lsp#enable()
+command! LspDisable call lsp#disable()()
+
+nnoremap <Leader>lh <plug>(lsp-hover)
+nnoremap <Leader>ld <plug>(lsp-definition)
+nnoremap <Leader>lr <plug>(lsp-rename)
+nnoremap <Leader>lf <plug>(lsp-document-format)
+nnoremap <Leader>ls <plug>(lsp-status)
 '''
 
 [[plugins]]

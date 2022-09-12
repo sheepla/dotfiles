@@ -136,7 +136,7 @@ depends = ['voldikss/vim-floaterm']
 hook_add = '''
 let g:lf_replace_netrw = 1
 let g:lf_command_override = 'lf -command "set hidden"'
-nnoremap <Leader>lc :Lflcd<CR>
+nnoremap <Leader>fc :Lflcd<CR>
 '''
 
 [[plugins]]
@@ -161,4 +161,10 @@ repo = 'rakr/vim-togglebg'
 
 [[plugins]]
 repo = 'mattn/vim-findroot'
+
+[[plugins]]
+repo = 'mhinz/vim-sayonara'
+
+[[plugins]]
+repo = 'mattn/vim-gorename'
 
