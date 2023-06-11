@@ -1,9 +1,9 @@
 [Configuration]
-FontName=PlemolJP weight=450 12
+FontName=PlemolJP Console NF Medium 12
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
-MiscBordersDefault=TRUE
+MiscBordersDefault=FALSE
 MiscCursorBlinks=TRUE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=80x24
@@ -18,7 +18,7 @@ MiscTabCloseButtons=TRUE
 MiscTabCloseMiddleClick=TRUE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
-MiscMiddleClickOpensUri=FALSE
+MiscMiddleClickOpensUri=TRUE
 MiscCopyOnSelect=TRUE
 MiscShowRelaunchDialog=TRUE
 MiscRewrapOnResize=TRUE
@@ -37,4 +37,6 @@ TextBlinkMode=TERMINAL_TEXT_BLINK_MODE_NEVER
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 BackgroundDarkness=0.910000
 ColorCursorForeground=#161518172121
+MiscRightClickAction=TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
 

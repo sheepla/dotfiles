@@ -325,4 +325,10 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
 #    fi
 #done
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /home/sheepla/go/bin/gocomplete go
+complete -o nospace -C gocomplete go
+
+# Deno
+command -v deno &>/dev/null && source <(deno completions zsh)
+
+
+

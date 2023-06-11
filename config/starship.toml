@@ -86,4 +86,5 @@ style = "bold green"
 
 [golang]
 disabled = false
+symbol = "Go "
 

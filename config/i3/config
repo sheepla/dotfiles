@@ -56,8 +56,8 @@ bindsym $mod+Tab   exec --no-startup-id "LANG=en_US.UTF8 rofi -combi drun,run -m
 bindsym $mod+space exec --no-startup-id "LANG=en_US.UTF8 rofi -combi drun,run -modi drun,run -show drun"
 
 # Rofi Emoji
-#bindsym $mod+m exec --no-startup-id "rofi -show emoji -modi emoji"
-bindsym $mod+m exec --no-startup-id "rofi -modi emoji -show emoji -emoji-format '{emoji} <span weight="bold">{name}</span>[ <span size=small>({keywords})</span>]'"
+bindsym $mod+m exec --no-startup-id "rofi -show emoji -modi emoji -kb-custom-1 Ctrl+c"
+#bindsym $mod+m exec --no-startup-id "rofi -modi emoji -show emoji -emoji-format '{emoji} <span weight="bold">{name}</span>[ <span size=small>({keywords})</span>]'"
 
 # ArandR
 bindsym $mod+Ctrl+p exec --no-startup-id "$HOME/bin/arandrmenu &"
@@ -237,7 +237,7 @@ bar {
     #     bumblebee-status -m <modules...> -p <params...> -t <theme>
     status_command bumblebee-status \
         -m title cmus cpu memory battery date time spacer\
-        -p time.format="%H:%M" date.format="%m/%d" memory.format=" {percent:05.02f}%" title.max=50 title.scroll=True spacer.text="  "\
+        -p time.format=" %H:%M" date.format=" %m/%d" memory.format=" {percent:05.02f}%" title.max=50 title.scroll=True spacer.text="I use   btw."\
         -t iceberg-darker-powerline
 
 # }}}

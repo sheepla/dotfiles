@@ -32,9 +32,10 @@ repo = 'skanehira/denops-germanium.vim'
 repo = 'Shougo/ddc.vim'
 depends = 'vim-denops/denops.vim'
 on_event = 'InsertEnter'
-hook_source = '''
-execute 'source' fnamemodify($MYVIMRC, ':h'). '/ddcrc.vim'
-'''
+#hook_source = '''
+#execute 'source' fnamemodify($MYVIMRC, ':h'). '/ddcrc.vim'
+#'''
+
 [[plugins]]
 repo = 'shun/ddc-vim-lsp'
 on_source = 'ddc.vim'

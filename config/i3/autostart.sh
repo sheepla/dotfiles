@@ -16,17 +16,19 @@ layout_config="$HOME/.config/arandr/layout.sh"
 _has nitrogen && nitrogen --restore &
 
 # Launch composite manger
-if _has picom && ! pgrep picom
-then
-    picom_conf="$HOME/.config/picom/picom.conf" 
+#if _has picom && ! pgrep picom
+#then
+#    picom_conf="$HOME/.config/picom/picom.conf" 
+#
+#    if [ -f $picom_conf ]
+#    then
+#        picom --config "$picom_conf" --daemon --experimental-backends &
+#    else
+#        picom --daemon --experimental-backends &
+#    fi 
+#fi
 
-    if [ -f $picom_conf ]
-    then
-        picom --config "$picom_conf" --daemon --experimental-backends &
-    else
-        picom --daemon --experimental-backends &
-    fi 
-fi
+_has xcompgr && pgrep &>/dev/null || xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 
 # Launch clipboard manager
 _has greenclip && pgrep greenclip || greenclip daemon &
@@ -35,7 +37,7 @@ _has greenclip && pgrep greenclip || greenclip daemon &
 _has pulseaudio && pgrep pulseaudio || pulseaudio --start &
 
 # Launch volume applet
-_has volumeicon &>/dev/null && pgrep volumeicon || sleep 3 && volumeicon &
+_has volumeicon &>/dev/null && pgrep volumeicon || volumeicon &
 
 # Launch screenshot applet
 _has flameshot && pgrep flameshot || flameshot &
@@ -49,3 +51,5 @@ _has fcitx5 &>/dev/null && pgrep fcitx5 || fcitx5 &
 # Power event alerting daemon
 _has poweralertd && pgrep poweralertd || poweralertd &
 
+# Backlight
+_has xbacklight && xbacklight -set 3

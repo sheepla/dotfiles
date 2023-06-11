@@ -2,6 +2,7 @@ local wezterm = require 'wezterm';
 return {
   -- font
   font = wezterm.font_with_fallback({
+    -- {family="Intel One Mono", weight="Medium"},
     {family="PlemolJP Console NF", weight="Medium"},
     {family="IBM Plex Sans JP", weight="Medium"},
     {family="Source Han Sans JP"},
@@ -20,7 +21,7 @@ return {
   -- tab bar
   use_fancy_tab_bar = false,
   colors = {
-    cursor_bg= "#444b71",
+    cursor_bg= "#c6c8d1",
     tab_bar = {
       background = "#1b1f2f",
 

@@ -54,9 +54,6 @@ let g:tokyonight_enable_italic = 1
 '''
 
 [[plugin]]
-repo = 'hachy/eva01.vim'
-
-[[plugin]]
 repo = 'vim-scripts/reloaded.vim'
 
 [[plugin]]
@@ -73,4 +70,46 @@ repo = 'tiagovla/tokyodark.nvim'
 
 [[plugin]]
 repo = 'Badacadabra/vim-archery'
+
+[[plugin]]
+repo = 'tiagovla/tokyodark.nvim'
+
+[[plugin]]
+repo = 'catppuccin/nvim'
+
+[[plugins]]
+repo = 'wadackel/vim-dogrun'
+
+# [[plugins]]
+# repo = 'rakr/vim-two-firewatch'
+# hook_add = '''
+# let g:two_firewatch_italics=1
+# '''
+
+[[plugins]]
+repo = 'liuchengxu/space-vim-dark'
+
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+
+[[plugins]]
+repo = 'Badacadabra/vim-archery'
+
+[[plugins]]
+repo = 'EdenEast/nightfox.nvim'
+
+[[plugins]]
+repo = 'rebelot/kanagawa.nvim'
+
+[[plugins]]
+repo = 'vim-scripts/chlordane.vim'
+
+[[plugins]]
+repo = 'atelierbram/Base2Tone-vim'
+
+[[plugins]]
+repo = 'vim-scripts/darkbone.vim'
+
+[[plugin]]
+repo = 'hachy/eva01.vim'
 

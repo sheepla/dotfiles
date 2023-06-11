@@ -73,4 +73,9 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 # enhancd
 #ENHANCD_DOT_ARG="_"
 
+# fzwiki
 export FZWIKI_LANG="ja"
+
+# strans
+export STRANS_SOURCE_LANG=auto
+export STRANS_TARGET_LANG=ja

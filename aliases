@@ -104,3 +104,16 @@ htmlview() {
 lnbin() {
    ln -s "${1}" "${HOME}/bin" 
 }
+
+# https://github.com/kyoh86/richgo
+if has richgo; then
+    alias go=richgo
+fi
+
+# aria2c
+alias alia2c-fast='alia2c -x10 -s10 -k1M'
+
+# yt-dlp
+if has yt-dlp && has aria2c; then
+    alias yt-dlp-fast="yt-dlp --downloader aria2c --downloader-args '-x10 -s10 -k1M' "
+fi

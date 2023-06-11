@@ -34,7 +34,7 @@ set completeopt-=preview
 set clipboard+=unnamed
 set showtabline=2
 set list
-set listchars=tab:»\ ,trail:-,extends:»,precedes:«,nbsp:%
+set listchars=tab:»\ ,trail:~,extends:»,precedes:«,nbsp:%
 set scrolloff=5
 
 " colorscheme
