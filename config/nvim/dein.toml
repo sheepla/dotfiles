@@ -157,9 +157,6 @@ let g:user_emmet_leader_key = '<C-y>'
 repo = 'tyru/open-browser.vim'
 
 [[plugins]]
-repo = 'rakr/vim-togglebg'
-
-[[plugins]]
 repo = 'mattn/vim-findroot'
 
 [[plugins]]

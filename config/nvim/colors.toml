@@ -113,3 +113,5 @@ repo = 'vim-scripts/darkbone.vim'
 [[plugin]]
 repo = 'hachy/eva01.vim'
 
+[[plugin]]
+repo = 'widatama/vim-phoenix'
