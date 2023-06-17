@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=/usr/bin/fcitx5
+Name=fcitx5
+Type=Application

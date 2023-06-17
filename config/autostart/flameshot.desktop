@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=/usr/bin/flameshot
+Name=flameshot
+Comment=Powerful yet simple-to-use screenshot software
+Type=Application

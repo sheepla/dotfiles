@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=/usr/bin/polkit-dumb-agent
+Name=polkit-dumb-agent
+Type=Application

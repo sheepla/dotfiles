@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=/usr/bin/nm-applet
+Name=nm-applet
+Comment=network monitor and control GUI applet
+Type=Application

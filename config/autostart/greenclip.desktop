@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=/usr/bin/greenclip daemon
+Name=greenclip
+Type=Application
