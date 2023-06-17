@@ -6,8 +6,7 @@
 #                                                     /____/   
 
 # Run auto start script
-exec_always --no-startup-id "sh $HOME/.config/i3/autostart.sh"
-# }}}
+#exec_always --no-startup-id "sh $HOME/.config/i3/autostart.sh"
 
 # colorscheme 
 set $fg      "#c6c8d1"
@@ -58,12 +57,6 @@ bindsym $mod+space exec --no-startup-id "LANG=en_US.UTF8 rofi -combi drun,run -m
 # Rofi Emoji
 bindsym $mod+m exec --no-startup-id "rofi -show emoji -modi emoji -kb-custom-1 Ctrl+c"
 #bindsym $mod+m exec --no-startup-id "rofi -modi emoji -show emoji -emoji-format '{emoji} <span weight="bold">{name}</span>[ <span size=small>({keywords})</span>]'"
-
-# ArandR
-bindsym $mod+Ctrl+p exec --no-startup-id "$HOME/bin/arandrmenu &"
-
-# Screenshot
-bindsym $mod+p exec --no-startup-id "$HOME/bin/i3scrotmenu &"
 
 # Clipboard manager
 bindsym $mod+i exec --no-startup-id "rofi -modi 'clipboard:greenclip print' -show clipboard &"
@@ -178,8 +171,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# Gaps (i3-gaps) ------------------------------------------------------- {{{
-# https://github.com/Airblader/i3-gaps
 for_window [class=".*"] border pixel 2
 
 # Define default gaps value
@@ -187,8 +178,6 @@ set $default_inner_gaps 20
 set $default_outer_gaps 5
 gaps inner $default_inner_gaps
 gaps outer $default_outer_gaps
-
-# }}}
 
 set $resize_mode " RESIZE "
 mode $resize_mode {
@@ -218,7 +207,6 @@ mode $resize_mode {
     # back to normal: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
-
 }
 
 bindsym $mod+r mode $resize_mode exec --no-startup-id "notify-send 'Resize Mode'"
@@ -232,15 +220,13 @@ bar {
     ## i3status-rust
     # status_command i3status-rs ~/.config/i3status-rust/config.toml
 
-    # bumblebee-status --------------------------------------------- {{{
+    # bumblebee-status ---------------------------------------------
     # format:
     #     bumblebee-status -m <modules...> -p <params...> -t <theme>
     status_command bumblebee-status \
         -m title cmus cpu memory battery date time spacer\
         -p time.format=" %H:%M" date.format=" %m/%d" memory.format=" {percent:05.02f}%" title.max=50 title.scroll=True spacer.text="I use   btw."\
         -t iceberg-darker-powerline
-
-# }}}
 
     colors {
         # <class>          <border>   <bg>     <fg>
@@ -253,7 +239,6 @@ bar {
     }
 }
 
-# }}} 
 
 # $mod+[, $mod+] -> switch workspace prev/next
 # $mod+{, $mod+} -> move   workspace prev/next
@@ -279,5 +264,4 @@ client.urgent           $bg2     $red         $bg          $gray       $bg2
 client.placeholder      $bg2     $green       $bg          $gray       $bg2
 client.background $bg
 title_align center
-# }}}
 
