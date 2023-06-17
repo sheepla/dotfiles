@@ -32,7 +32,7 @@ man() {
     LESS_TERMCAP_se=$'\e[0m' \
     LESS_TERMCAP_so=$'\e[01;44;30m' \
     LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;35m' \
+    LESS_TERMCAP_us=$'\e[01;36m' \
     command man "$@"
 }
 
