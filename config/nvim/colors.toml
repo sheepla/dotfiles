@@ -106,6 +106,9 @@ repo = 'vim-scripts/chlordane.vim'
 
 [[plugins]]
 repo = 'atelierbram/Base2Tone-vim'
+#hook_add = '''
+#colorscheme Base2Tone_DrawbridgeDark
+#'''
 
 [[plugins]]
 repo = 'vim-scripts/darkbone.vim'

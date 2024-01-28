@@ -1,14 +1,16 @@
 [[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-on_func = 'lsp#enable'
 hook_add = '''
 augroup vimrc
     au!
-    autocmd BufWritePre *.ts,*.tsx LspDocumentFormatSync
-    autocmd BufWritePre *.js,*.jsx LspDocumentFormatSync
-    autocmd BufWritePre *.json LspDocumentFormatSync
-    autocmd BufWritePre *.cs LspDocumentFormatSync
-    autocmd BufWritePre *.ps1 LspDocumentFormatSync
+    autocmd BufWritePre *.ts,*.tsx LspDocumentFormat
+    autocmd BufWritePre *.js,*.jsx LspDocumentFormat
+    autocmd BufWritePre *.json LspDocumentFormat
+    autocmd BufWritePre *.cs LspDocumentFormat
+    autocmd BufWritePre *.ps1 LspDocumentFormat
+    autocmd BufWritePre *.go LspDocumentFormat
+    autocmd BufWritePre *.fs LspDocumentFormat
+    autocmd BufWritePre *.html,*.css LspDocumentFormat
+    autocmd BufWritePre *.json,*.toml,*.yaml LspDocumentFormat
 augroup END
 
 highlight link LspErrorHighlight ALEErrorSign
@@ -22,7 +24,8 @@ let g:lsp_diagnostics_signs_warning = {'text': ''}
 let g:lsp_diagnostics_signs_hint = {'text': ''}
 
 command! LspEnable call lsp#enable()
-command! LspDisable call lsp#disable()()
+command! LspDisable call lsp#disable()
+command! LspRestart call lsp#disable() | call lsp#enable()
 
 nnoremap <Leader>lh <plug>(lsp-hover)
 nnoremap <Leader>ld <plug>(lsp-definition)
@@ -30,14 +33,16 @@ nnoremap <Leader>lr <plug>(lsp-rename)
 nnoremap <Leader>lf <plug>(lsp-document-format)
 nnoremap <Leader>ls <plug>(lsp-status)
 '''
+on_func = 'lsp#enable'
+repo = 'prabirshrestha/vim-lsp'
 
 [[plugins]]
-repo = 'mattn/vim-lsp-settings'
 hook_add = '''
 let g:markdown_fenced_languages = ['ts=typescript']
 let g:lsp_settings_filetype_typescript = ['typescript-language-server', 'eslint-language-server', 'deno']
 let g:lsp_settings_filetype_go = ['gopls', 'golangci-lint-langserver']
 '''
+repo = 'mattn/vim-lsp-settings'
 
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip'

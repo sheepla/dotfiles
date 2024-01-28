@@ -54,10 +54,10 @@ command! -bar LightlineUpdate
     \ call lightline#colorscheme()|
     \ call lightline#update()
 
-call lightline_skk#option('display', {
-    \ 'hiragana': 'あ',
-    \ 'katakana': 'ア',
-    \ 'hankaku-katakana': 'ｱｧ',
-    \ 'zenkaku-alphabet': 'Ａ',
-    \ 'alphabet': 'Aa',
-    \ })
+"call lightline_skk#option('display', {
+"    \ 'hiragana': 'あ',
+"    \ 'katakana': 'ア',
+"    \ 'hankaku-katakana': 'ｱｧ',
+"    \ 'zenkaku-alphabet': 'Ａ',
+"    \ 'alphabet': 'Aa',
+"    \ })

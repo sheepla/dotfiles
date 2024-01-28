@@ -61,6 +61,7 @@ set number
 
 " indent
 augroup vimrc
+  autocmd BufEnter *.go set noexpandtab | set shiftwidth=4
   autocmd BufEnter *.ts,*.js,*.tsx,*jsx set expandtab | set shiftwidth=2
   autocmd BufEnter *.json set expandtab | set shiftwidth=2
 augroup END
